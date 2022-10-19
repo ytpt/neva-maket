@@ -1,0 +1,397 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+section {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 375px;
+}
+
+.card {
+    margin: 30px auto;
+    position: relative;
+    max-width: 341px;
+    border: 0.3px solid #828282;
+    border-radius: 16px;
+}
+
+.header {
+    background-size: cover;
+    border-radius: 11px 11px 0 0;
+    background-image: url("assets/Kazan-cathedral.png");
+}
+
+.img-block_big, .img-block_small {
+    background-position: center center;
+}
+
+.img-block_big {
+    height: 284px;
+}
+
+.img-block_small {
+    height: 220px;
+}
+
+.label-new {
+    position: absolute;
+    left: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.label-new_yellow {
+    padding: 8px 17px;
+    top: 40px;
+    background: #FED74B;
+    color: #3E3E3E;
+    font-size: 12px;
+}
+
+.label-new_blue {
+    padding: 12px 27px;
+    top: 0;
+    background: #7553FF;
+    border-radius: 15px 0 12px;
+    color: #fff
+}
+
+.clock-block {
+    margin-top: 16px;
+    text-align: start;
+}
+
+.clock-block img, .clock-block p {
+    display: inline-block;
+    align-items: flex-start;
+    text-align: start;
+    margin-right: 9px;
+    justify-self: baseline;
+    vertical-align: middle;
+}
+
+.clock-block p {
+    color: #9E9E9E;
+    font-size: 12px;
+}
+
+.main {
+    padding: 0 13px;
+}
+
+.main-header h2 {
+    color: #404040;
+    font-weight: 600;
+    line-height: 22px;
+    padding: 10px 0 15px 0;
+    text-align: start;
+}
+
+.main > ul {
+    list-style-type: none;
+    display: flex;
+    row-gap: 9px;
+    flex-direction: column;
+}
+
+.main > ul > li {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    justify-content: right;
+    align-items: baseline;
+    margin: 0;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.main > ul > li > p {
+    color: #4B4B4B;
+}
+
+.main__time_hidden {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 7px;
+    flex-wrap: wrap;
+    height: 30px;
+    overflow: hidden;
+    margin-top: 7px;
+    color: #343434;
+}
+
+.main__time_active {
+    height: 100%;
+    overflow: visible;
+}
+
+.main__time li {
+    background: #D9E8FF;
+    border-radius: 11px;
+    padding: 3px 13px;
+    margin-bottom: 7px;
+}
+
+.main__time_hidden > li > button, .main__time_active > li > button {
+    cursor: pointer;
+}
+
+.main__time_active > .li-active {
+    background: #6BA6FF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main__time_active > button:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-active {
+    color: #fff;
+}
+
+.main__time > ul > p {
+    color: #343434;
+    font-weight: 400;
+}
+
+.main__time button {
+    border: none;
+    background: transparent;
+}
+
+.footer {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 19px;
+}
+
+.footer__price_basic, .footer__price_uniq {
+    margin-left: 6px;
+}
+
+.footer__price_basic > h4, .footer__price_uniq > h4 {
+    color: #000000;
+    font-size: 30px;
+    text-align: start;
+}
+
+.footer__price_basic > p, .footer__price_uniq > p {
+    color: #000000;
+    font-size: 10px;
+    text-align: start;
+    width: 100px;
+    line-height: 11px;
+    margin-top: 11px;
+}
+
+.footer__price_center {
+    align-self: center;
+}
+
+.footer > button {
+    color: #404040;
+    background: #FED74B;
+    border: 0.5px solid #CBA500;
+    cursor: pointer;
+}
+
+.footer__price_basic + button {
+    padding: 12px 41px;
+    border-radius: 20px;
+    margin-right: 6px;
+}
+
+.footer__price_uniq + button {
+    padding: 12px 57px 11px 50px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-left: 6px;
+}
+
+@media only screen and (min-width : 992px) {
+    .container {
+        max-width: 1100px;
+    }
+
+    .card {
+        max-width: 1070px;
+        border: 0.5px solid #8E8E8E;
+        border-radius: 15px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .img-block_big, .img-block_small {
+        width: 473px;
+        height: auto;
+    }
+
+    .header {
+        border-radius: 11px 0 0 11px;
+    }
+
+    .bg-neva {
+        background-image: url("assets/Neva-river.png");
+    }
+
+    .bg-bus {
+        background-image: url("assets/Bus.png");
+    }
+
+    .bg-musician {
+        background-image: url("assets/Musician.png");
+    }
+
+    .label-new {
+        position: absolute;
+        left: 0;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+
+    .label-new_yellow{
+        top: 59px;
+        padding: 12px 34px 14px 35px;
+        background: #099CE8;
+        color: #fff;
+    }
+
+    .label-new_blue {
+        padding: 13px 33px;
+        top: 46px;
+        background: #FED74B;
+        color: #3E3E3E;
+        border-radius: 0;
+    }
+
+    .main-header {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .clock-block {
+        margin: 0;
+        padding: 11px 0 9px 0;
+    }
+
+    .clock-block img, .clock-block p {
+        margin-right: 6px;
+    }
+
+    .clock-block p {
+        font-size: 14px;
+    }
+
+    .main {
+        padding: 16px 17px 26px 23px;
+    }
+
+    .main h2 {
+        color: #000;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 34px;
+        padding: 0;
+    }
+
+    .main > ul {
+        row-gap: 14px;
+    }
+
+    .main > ul > li {
+        column-gap: 14px;
+    }
+
+    .main > ul > li > p {
+        font-size: 18px;
+        color: #343434;
+    }
+
+    .main__time > div {
+        display: inline-grid;
+        grid-template-columns: 230px auto;
+        column-gap: 6px;
+    }
+
+    .main__time > div > p {
+        margin: 0;
+        font-size: 18px;
+        color: #343434;
+    }
+
+    .main__time_hidden {
+        list-style-type: none;
+        margin: 0;
+    }
+
+    .main__time_hidden li {
+        padding: 4px 15px;
+        cursor: pointer;
+    }
+
+    .main__time_hidden li:hover {
+        background: #6BA6FF;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .main__time_hidden > li > button:hover, .main__time_active > li > button:hover {
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .main__time_hidden > li > p {
+        font-size: 14px;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        column-gap: 10px;
+        margin: 27px 0 0 0;
+    }
+
+    .footer__price_basic, .footer__price_uniq {
+        width: 130px;
+        margin: 0;
+    }
+
+    .footer__price_basic + button, .footer__price_uniq + button {
+        font-size: 18px;
+        font-weight: 400;
+        color: #292929;
+        border-radius: 23px;
+        padding: 16px 42px;
+        border: none;
+        margin: 0;
+    }
+
+    .footer__price_basic > h4, .footer__price_uniq > h4 {
+        font-size: 36px;
+        margin-bottom: 2px;
+    }
+
+    .footer__price_basic > p, .footer__price_uniq > p {
+        font-size: 14px;
+        width: 130px;
+    }
+}
