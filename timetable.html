@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NevaTrip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="timetable.css">
+</head>
+<body>
+<div class="container">
+    <section class="select-path">
+        <label for="route">Куда поедем?</label>
+        <select name="route" id="route" required>
+            <option selected disabled>Выберите маршрут</option>
+            <option value="ab" id="AB">из A в B</option>
+            <option value="ba" id="BA">из B в A</option>
+            <option value="aba" id="ABA">из A в B и обратно в А</option>
+        </select>
+    </section>
+    <section class="select-time hidden"></section>
+    <section class="tickets-count hidden">
+        <label for="num">Количество билетов</label>
+        <input id="num" type="number" min="1" value="1" required>
+        <button onclick="renderTotalResult()">Посчитать</button>
+    </section>
+    <section class="total"></section>
+</div>
+<script src="timetable.js" ></script>
+</body>
+</html>
